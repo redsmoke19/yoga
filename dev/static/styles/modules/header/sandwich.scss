@@ -1,0 +1,51 @@
+.sandwich {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 12px;
+  padding: 0;
+  position: relative;
+  width: 30px;
+  @media screen and (min-width: $tablet-size) {
+    display: none;
+  }
+  &--active {
+    .sandwich__line {
+      &--top {
+        top: 10px;
+        transform: rotate(45deg);
+      }
+      &--middle { opacity: 0; }
+      &--bottom {
+        top: 10px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__line {
+    background-color: $base-font-color;
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transition: all linear .2s;
+    width: 100%;
+    &--top { top: 0; }
+    &--middle { top: 6px; }
+    &--bottom {
+      top: 12px;
+      width: 20px;
+    }
+  }
+  span { font-size: 0; }
+
+  //Увеличивает область клика на кнопку
+  &::before {
+    position:absolute;
+    content:'';
+    top:-5px;
+    right:-5px;
+    left:-5px;
+    bottom:-5px;
+  }
+}

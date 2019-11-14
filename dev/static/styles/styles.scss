@@ -10,10 +10,11 @@ html {
 body {
   width: 100%;
   max-width: 100%;
-  color: $black;
-  font-family: $second-font;
+  color: $base-font-color;
+  font-family: $main-font;
   font-size: $base-font-size;
   line-height: 24px;
+  background-color: $bg-color;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -50,7 +51,7 @@ button { outline: none; }
 
 .container {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
   position: relative;
   @media screen and (min-width: $tablet-size) {
     padding: 0 50px;

@@ -1,19 +1,23 @@
 @font-face {
-  font-family: 'Open Sans Bold';
-  src: url('../fonts/OpenSans-Bold.eot');
-  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/OpenSans-Bold.woff') format('woff'),
-  url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-family: 'Caveat_regular';
+  src: url('../fonts/Caveat-Regular.woff') format('woff'),
+  url('../fonts/Caveat-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans Regular';
-  src: url('../fonts/OpenSans-Regular.eot');
-  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/OpenSans-Regular.woff') format('woff'),
-  url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-family: 'Geometria_bold';
+  src: url('../fonts/Geometria-Bold.woff') format('woff'),
+  url('../fonts/Geometria-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria_medium';
+  src: url('../fonts/Geometria-Medium.woff') format('woff'),
+  url('../fonts/Geometria-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

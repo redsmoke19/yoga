@@ -1,1 +1,26 @@
 header.header
+    .container
+        .header__top
+            .header__menu
+                button(type="button").sandwich
+                    .sandwich__line.sandwich__line--top
+                    .sandwich__line.sandwich__line--middle
+                    .sandwich__line.sandwich__line--bottom
+                span.header__text Меню
+            a.header__phone(href="tel:+78126901010") 8 (812) 690-10-10
+        .header__body
+            span.header__slogan Почувствуй расслабление в своем теле
+            h1.header__logo YOGA
+            button.header__trial-lesson Запишитесь на бесплатное<br> пробное занятие
+        .header__bottom
+            ul.header__social.social__list
+                li.social__item
+                    a.social__link(href="#")
+                        +icon('icon-vk', 'icon-vk', '13', '8')
+                li.social__item
+                    a.social__link(href="#")
+                        +icon('icon-twitter', 'icon-twitter', '15', '10')
+                li.social__item
+                    a.social__link(href="#")
+                        +icon('icon-facebook', 'icon-facebook', '5', '10')
+            p.header__text Санкт-Петербург
