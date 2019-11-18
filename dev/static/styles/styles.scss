@@ -92,5 +92,12 @@ input[type="radio"].visually-hidden {
   }
 }
 
+.title {
+  font-family: $bold-font;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+
 //Модули
 @import "modules/modules";

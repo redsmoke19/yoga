@@ -65,12 +65,13 @@
       width: 30px;
     }
     &::after {
-      background: url("../images/general/arrow.svg") no-repeat center;
+      background: url("../images/general/arrow.svg") no-repeat;
       content: "";
-      height: 8px;
+      height: 10px;
       left: 13px;
       position: absolute;
-      width: 5px;
+      top: 8px;
+      width: 6px;
     }
   }
   &__bottom {

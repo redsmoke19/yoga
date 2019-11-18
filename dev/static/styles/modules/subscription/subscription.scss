@@ -1,0 +1,68 @@
+.s-subscription {
+  background-image: url("../images/general/yoga_bg-clouds1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.subscription {
+  &__title { margin-bottom: 40px; }
+}
+
+.month-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 0 30px;
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: $text-color-red;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 0;
+    &--active { border-bottom: 1px solid $text-color-red; }
+  }
+}
+
+.membership {
+  padding: 0 15px;
+  &__item {
+    align-items: center;
+    background-color: $white;
+    box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    &:not(:last-child) { margin-bottom: 30px; }
+  }
+  &__title {
+    font-family: $bold-font;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__time {
+    color: $text-color-red;
+    line-height: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__price {
+    font-family: $bold-font;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+  &__button {
+    background-color: $base-font-color;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    line-height: 20px;
+    padding: 7px;
+    width: 150px;
+  }
+}
