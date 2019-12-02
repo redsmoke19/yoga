@@ -1,9 +1,9 @@
 {
-  "name": "start-template",
+  "name": "yoga",
   "version": "1.0.0",
-  "description": "My start Template",
+  "description": "yoga",
   "main": "index.js",
-  "author": "Salamatin Anatoliy",
+  "author": "Oleg Tsyganov",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.3",
@@ -37,6 +37,7 @@
     "svgo": "^1.3.2"
   },
   "dependencies": {
+    "flickity": "^2.2.1",
     "normalize.css": "^8.0.0",
     "svg4everybody": "^2.1.9"
   }

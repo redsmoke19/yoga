@@ -3,6 +3,26 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-bottom: 70px;
+  &::after {
+    background: url("../images/general/yoga_bg-pattern2x1.png");
+    background-size: contain;
+    bottom: -115px;
+    content: '';
+    height: 270px;
+    left: calc(50% - 155px);
+    position: absolute;
+    width: 310px;
+    z-index: -1;
+    @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../images/general/yoga_bg-pattern2x2.png");
+      background-size: contain;
+    }
+  }
+  @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url('../images/general/yoga_bg-clouds2x.png');
+    background-size: contain;
+  }
 }
 
 .subscription {
@@ -27,7 +47,10 @@
 }
 
 .membership {
+  display: none;
   padding: 0 15px;
+  animation: fadeEffect 0.4s;
+  &--active { display: block; }
   &__item {
     align-items: center;
     background-color: $white;
@@ -64,5 +87,16 @@
     line-height: 20px;
     padding: 7px;
     width: 150px;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

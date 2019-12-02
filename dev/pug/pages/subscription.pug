@@ -4,12 +4,12 @@ section.s-subscription
             h2.subscription__title.title Абонементы
             ul.subscription__month-list.month-list
                 li.month-list__item
-                    button.month-list__button.month-list__button--active 1 месяц
+                    button.month-list__button.month-list__button--active(data-tab-name="membership-one") 1 месяц
                 li.month-list__item
-                    button.month-list__button 6 месяцев
+                    button.month-list__button(data-tab-name="membership-six") 6 месяцев
                 li.month-list__item
-                    button.month-list__button 12 месяцев
-            ul.subscription__list.membership
+                    button.month-list__button(data-tab-name="membership-twelve") 12 месяцев
+            ul.subscription__list.membership.membership-one.membership--active
                 li.membership__item
                     h3.membership__title Утро
                     p.membership__time Посещение<br> с 11:00 до 16:00
@@ -24,4 +24,36 @@ section.s-subscription
                     h3.membership__title Вечер
                     p.membership__time Посещение<br> с 17:00 до 21:00
                     span.membership__price 2 000 Р
+                    button.membership__button Заказать абонемент
+            ul.subscription__list.membership.membership-six
+                li.membership__item
+                    h3.membership__title Утро
+                    p.membership__time Посещение<br> с 11:00 до 16:00
+                    span.membership__price 5 500 Р
+                    button.membership__button Заказать абонемент
+                li.membership__item
+                    h3.membership__title Безлимит
+                    p.membership__time Посещение не ограничено<br> по времени
+                    span.membership__price 11 000 Р
+                    button.membership__button Заказать абонемент
+                li.membership__item
+                    h3.membership__title Вечер
+                    p.membership__time Посещение<br> с 17:00 до 21:00
+                    span.membership__price 9 000 Р
+                    button.membership__button Заказать абонемент
+            ul.subscription__list.membership.membership-twelve
+                li.membership__item
+                    h3.membership__title Утро
+                    p.membership__time Посещение<br> с 11:00 до 16:00
+                    span.membership__price 10 400 Р
+                    button.membership__button Заказать абонемент
+                li.membership__item
+                    h3.membership__title Безлимит
+                    p.membership__time Посещение не ограничено<br> по времени
+                    span.membership__price 21 500 Р
+                    button.membership__button Заказать абонемент
+                li.membership__item
+                    h3.membership__title Вечер
+                    p.membership__time Посещение<br> с 17:00 до 21:00
+                    span.membership__price 19 100 Р
                     button.membership__button Заказать абонемент

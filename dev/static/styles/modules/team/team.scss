@@ -1,0 +1,102 @@
+.s-team {
+  background-image: url("../images/general/yoga_bg-pattern3x1.png");
+  background-repeat: no-repeat;
+  background-position: 0 -15px;
+  background-size: 270px 300px;
+  @media screen and (-webkit-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../images/general/yoga_bg-pattern3x2.png");
+  }
+}
+
+.team {
+  &__title { margin-bottom: 40px; }
+}
+
+.team-list {
+  position: relative;
+  &__item {
+    margin: 0 auto;
+    padding: 0 35px;
+    width: 100%;
+  }
+  &__header {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__avatar {
+    display: block;
+    max-width: 82px;
+    width: 100%;
+  }
+  &__specification {
+    background-color: $white;
+    box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  &__instructor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 15px;
+    margin-right: 5px;
+  }
+  &__name { color: $text-color-red; }
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__link { line-height: 15px; }
+  &__icon {
+    fill: rgba(139, 126, 172, 0.65);
+    &:hover { fill: $base-font-color; }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__subtitle {
+    color: $text-color-red;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-bottom: 15px;
+  }
+  &__description {
+    line-height: 15px;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  &__button {
+    background-color: $base-font-color;
+    border: 1px solid $base-font-color;
+    cursor: pointer;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 26px;
+    width: 16px;
+    z-index: 10;
+    .icon-arrow {
+      left: 4px;
+      position: absolute;
+      top: 8px;
+      fill: $white;
+    }
+    &--next {
+      left: auto;
+      right: 0;
+    }
+    &--prev {
+      svg { transform: rotate(180deg); }
+    }
+    &:disabled {
+      background-color: transparent;
+      .icon-arrow { fill: $base-font-color; }
+    }
+  }
+}
