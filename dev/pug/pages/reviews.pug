@@ -1,0 +1,26 @@
+section.s-reviews
+    .container
+        .reviews
+            h2.reviews__title.title Отзывы
+            .reviews__list
+                .js-reviews-list
+                    .reviews__item
+                        p.reviews__text Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!
+                        p.reviews__text Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.
+                        .reviews__author
+                            .reviews__image
+                                picture
+                                    //source(type="image/webp" media="(min-width: 1300px)" srcset="/static/images/content/index-can-desktop1x.webp, /static/images/content/index-can-desktop2x.webp 2x")
+                                    //source(type="image/webp" media="(min-width: 768px)" srcset="/static/images/content/index-can-tablet1x.webp, /static/images/content/index-can-tablet2x.webp 2x")
+                                    //source(type="image/webp" srcset="/static/images/content/index-can-mobile1x.webp, /static/images/content/index-can-mobile2x.webp 2x")
+                                    //source(media="(min-width: 1300px)" srcset="/static/images/content/index-can-desktop1x.png 1x, /static/images/content/index-can-desktop2x.png 2x")
+                                    //source(media="(min-width: 768px)" srcset="/static/images/content/index-can-tablet1x.png 1x, /static/images/content/index-can-tablet2x.png 2x")
+                                    img.reviews__avatar(src="/static/images/content/reviews_img-1x1.jpg" srcset="/static/images/content/reviews_img-1x2.jpg 2x" width="52" height="52" alt="Фотография автора")
+                            .reviews__author-info
+                                span.reviews__name Серёжа Попов
+                                span.reviews__date 16 мая 2018
+                                .reviews__social
+                                    a.reviews__link(href="#" title="Вконтакте")
+                                        +icon("icon-vk","reviews__icon reviews__icon--vk", "13", "8")
+                                    a.reviews__link(href="#" title="Твиттер")
+                                        +icon("icon-twitter","reviews__icon reviews__icon--twitter", "15", "10")

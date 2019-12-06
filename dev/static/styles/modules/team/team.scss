@@ -9,6 +9,7 @@
 }
 
 .team {
+  margin-bottom: 70px;
   &__title { margin-bottom: 40px; }
 }
 
@@ -16,7 +17,7 @@
   position: relative;
   &__item {
     margin: 0 auto;
-    padding: 0 35px;
+    padding: 0 30px;
     width: 100%;
   }
   &__header {
