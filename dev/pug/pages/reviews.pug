@@ -24,3 +24,9 @@ section.s-reviews
                                         +icon("icon-vk","reviews__icon reviews__icon--vk", "13", "8")
                                     a.reviews__link(href="#" title="Твиттер")
                                         +icon("icon-twitter","reviews__icon reviews__icon--twitter", "15", "10")
+            .reviews__switch
+                button.button__slider.reviews__button.reviews__button--prev(disabled)
+                    +icon('icon-arrow', 'icon-arrow', '7', '11')
+                span.js-reviews__total-slider 1 / 9
+                button.button__slider.reviews__button.reviews__button--next
+                    +icon('icon-arrow', 'icon-arrow', '7', '11')

@@ -1,9 +1,22 @@
 .reviews {
   &__title { margin-bottom: 40px; }
-  &__list { padding: 0 20px; }
+  &__list {
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
   &__item {
     background-color: $white;
     padding: 60px 15px 30px;
+    position: relative;
+    &::before {
+      content: url("../images/general/icon-quote.svg");
+      height: 23px;
+      left: 15px;
+      opacity: 0.4;
+      position: absolute;
+      top: 17px;
+      width: 26px;
+    }
   }
   &__avatar { margin-right: 15px; }
   &__text {
@@ -39,6 +52,31 @@
     &:first-child {margin-right: 10px; }
     &:hover {
       fill: rgba(139, 126, 172, 1);
+    }
+  }
+  &__switch {
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 0;
+    position: relative;
+  }
+  &__button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 31px;
+    height: 16px;
+    &:first-of-type { margin-right: 10px; }
+    &:last-of-type { margin-left: 10px; }
+    .icon-arrow {
+      fill: $white;
+    }
+    &--prev {
+      svg { transform: rotate(180deg); }
     }
   }
 }

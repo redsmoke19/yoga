@@ -1,0 +1,11 @@
+.button__slider {
+  background-color: $base-font-color;
+  border: 1px solid $base-font-color;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  &:disabled {
+    background-color: transparent;
+    .icon-arrow { fill: $base-font-color; }
+  }
+}

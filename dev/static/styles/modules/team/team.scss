@@ -73,15 +73,11 @@
     }
   }
   &__button {
-    background-color: $base-font-color;
-    border: 1px solid $base-font-color;
-    cursor: pointer;
     height: 30px;
     left: 0;
     position: absolute;
     top: 26px;
     width: 16px;
-    z-index: 10;
     .icon-arrow {
       left: 4px;
       position: absolute;
@@ -94,10 +90,6 @@
     }
     &--prev {
       svg { transform: rotate(180deg); }
-    }
-    &:disabled {
-      background-color: transparent;
-      .icon-arrow { fill: $base-font-color; }
     }
   }
 }

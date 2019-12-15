@@ -3,9 +3,9 @@ section.s-team
         .team
             h2.team__title.title Наша команда
             .team-list
-                button.team-list__button.team-list__button--prev(disabled)
+                button.button__slider.team-list__button.team-list__button--prev(disabled)
                     +icon('icon-arrow', 'icon-arrow', '7', '11')
-                button.team-list__button.team-list__button--next
+                button.button__slider.team-list__button.team-list__button--next
                     +icon('icon-arrow', 'icon-arrow', '7', '11')
                 .js-team-list
                     .team-list__item
@@ -38,6 +38,30 @@ section.s-team
                             .team-list__specification
                                 .team-list__instructor
                                     span.team-list__name Инструктор<br> Олежа Цыганов
+                                    span.team-list__variety Ханта-Йога
+                                .team-list__social
+                                    a.team-list__link.team-list__link--vk(href="#")
+                                        +icon("icon-vk","team-list__icon team-list__icon--vk", "16", "10")
+                                    a.team-list__link.team-list__link--tweeter(href="#")
+                                        +icon("icon-twitter", " team-list__icon team-list__icon--tweeter", "18", "12")
+                        .team-list__body
+                            span.team-list__subtitle Опыт преподавания: 8 лет
+                            p.team-list__description Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+                            p.team-list__description Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.
+                            p.team-list__description Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+                            p.team-list__description Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.
+                    .team-list__item
+                        .team-list__header
+                            picture
+                                //source(type="image/webp" media="(min-width: 1300px)" srcset="/static/images/content/index-can-desktop1x.webp, /static/images/content/index-can-desktop2x.webp 2x")
+                                //source(type="image/webp" media="(min-width: 768px)" srcset="/static/images/content/index-can-tablet1x.webp, /static/images/content/index-can-tablet2x.webp 2x")
+                                //source(type="image/webp" srcset="/static/images/content/index-can-mobile1x.webp, /static/images/content/index-can-mobile2x.webp 2x")
+                                //source(media="(min-width: 1300px)" srcset="/static/images/content/index-can-desktop1x.png 1x, /static/images/content/index-can-desktop2x.png 2x")
+                                //source(media="(min-width: 768px)" srcset="/static/images/content/index-can-tablet1x.png 1x, /static/images/content/index-can-tablet2x.png 2x")
+                                img.team-list__avatar(src="/static/images/content/team_img-1x1.jpg" srcset="/static/images/content/team_img-1x2.jpg 2x" width="82" height="82" alt="Фотография тренера")
+                            .team-list__specification
+                                .team-list__instructor
+                                    span.team-list__name Инструктор<br> Ольга Моргачева
                                     span.team-list__variety Ханта-Йога
                                 .team-list__social
                                     a.team-list__link.team-list__link--vk(href="#")

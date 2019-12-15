@@ -31,23 +31,25 @@ $(document).ready(function () {
             pageDots: false,
             prevNextButtons: false,
         });
+
         var prevButton = document.querySelector('.team-list__button--prev');
         var nextButton = document.querySelector('.team-list__button--next');
 
         function arrowClickPrevHandler() {
             teamSlider.previous();
-            arrowClickDisabledHandler();
         }
+
         function arrowClickNextHandler() {
             teamSlider.next();
-            arrowClickDisabledHandler();
         }
-        function arrowClickDisabledHandler() {
+
+        function arrowClickDisabledHandler(index) {
+            console.log(index);
             if (!teamSlider.cells[teamSlider.selectedIndex - 1]) {
-                prevButton.setAttribute('disabled', 'disabled');
+                prevButton.setAttribute('disabled', '');
                 nextButton.removeAttribute('disabled');
             } else if (!teamSlider.cells[teamSlider.selectedIndex + 1]) {
-                nextButton.setAttribute('disabled', 'disabled');
+                nextButton.setAttribute('disabled', '');
                 prevButton.removeAttribute('disabled');
             } else {
                 prevButton.removeAttribute('disabled');
@@ -57,9 +59,10 @@ $(document).ready(function () {
 
         prevButton.addEventListener('click', arrowClickPrevHandler);
         nextButton.addEventListener('click', arrowClickNextHandler);
-
+        teamSlider.on('select', arrowClickDisabledHandler);
     }
 
     tabMembership();
     getTeamSlider();
+
 });
