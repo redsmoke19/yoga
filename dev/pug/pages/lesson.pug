@@ -1,0 +1,12 @@
+section.s-lesson
+    .container
+        .lesson
+            h2.lesson__title Запишитесь на бесплатное пробное занятие
+            form.lesson__form
+                .lesson__wrap
+                    input.lesson__input.lesson__name(id="name" type="text" minlength="2" maxlength="15" required)
+                    label.lesson__label.lesson__label-js(for="name") Ваше имя
+                .lesson__wrap
+                    input.lesson__input.lesson__phone(id="tel" type="tel" autocomplete="tel" required)
+                    label.lesson__label(for="tel") Ваш телефон
+                button.lesson__button(type="submit") Оставить заявку

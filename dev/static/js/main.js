@@ -64,7 +64,6 @@ $(document).ready(function () {
     function getReviewsSlider() {
         var reviewsList = document.querySelector('.js-reviews-list');
         var reviewsSlider = new Flickity(reviewsList, {
-            adaptiveHeight: true,
             pageDots: false,
             prevNextButtons: false,
         });
@@ -106,8 +105,33 @@ $(document).ready(function () {
         reviewsSlider.on('select', getCurrentReview);
     }
 
+    function getLabelBlur() {
+        var label = document.querySelectorAll('.lesson__label');
+        var input = document.querySelectorAll('.lesson__input');
+        var form = document.querySelector('.lesson__form');
+        function labelBlurHandler(evt) {
+            var target = evt.target;
+            if (target.closest('.lesson__label') || target.closest('.lesson__input')) {
+                for (var i = 0; i < label.length; i++) {
+                    if (input[i].value.length === 0) {
+                        label[i].style.transform = '';
+                        label[i].style.fontSize = '';
+                    } else {
+                        label[i].style.transform = 'translateY(-15px)';
+                        label[i].style.fontSize = '10px';
+                    }
+                }
+            } else {
+                return;
+            }
+        }
+        form.addEventListener('input', labelBlurHandler);
+        form.addEventListener('blur', labelBlurHandler);
+    }
+
     tabMembership();
     getTeamSlider();
     getReviewsSlider();
+    getLabelBlur();
 
 });
