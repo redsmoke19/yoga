@@ -43,8 +43,7 @@ $(document).ready(function () {
             teamSlider.next();
         }
 
-        function arrowClickDisabledHandler(index) {
-            console.log(index);
+        function arrowClickDisabledHandler() {
             if (!teamSlider.cells[teamSlider.selectedIndex - 1]) {
                 prevButton.setAttribute('disabled', '');
                 nextButton.removeAttribute('disabled');
@@ -62,7 +61,53 @@ $(document).ready(function () {
         teamSlider.on('select', arrowClickDisabledHandler);
     }
 
+    function getReviewsSlider() {
+        var reviewsList = document.querySelector('.js-reviews-list');
+        var reviewsSlider = new Flickity(reviewsList, {
+            adaptiveHeight: true,
+            pageDots: false,
+            prevNextButtons: false,
+        });
+        var counter = document.querySelector('.js-reviews__total-slider');
+
+        var prevButton = document.querySelector('.reviews__button--prev');
+        var nextButton = document.querySelector('.reviews__button--next');
+
+        function arrowClickPrevHandler() {
+            reviewsSlider.previous();
+        }
+
+        function arrowClickNextHandler() {
+            reviewsSlider.next();
+        }
+
+        function arrowClickDisabledHandler(index) {
+            // console.log(index);
+            if (!reviewsSlider.cells[reviewsSlider.selectedIndex - 1]) {
+                prevButton.setAttribute('disabled', '');
+                nextButton.removeAttribute('disabled');
+            } else if (!reviewsSlider.cells[reviewsSlider.selectedIndex + 1]) {
+                nextButton.setAttribute('disabled', '');
+                prevButton.removeAttribute('disabled');
+            } else {
+                prevButton.removeAttribute('disabled');
+                nextButton.removeAttribute('disabled');
+            }
+        }
+
+        function getCurrentReview() {
+            var cellNumber = reviewsSlider.selectedIndex + 1;
+            counter.textContent = cellNumber + ' / ' + reviewsSlider.slides.length;
+        }
+        getCurrentReview()
+        prevButton.addEventListener('click', arrowClickPrevHandler);
+        nextButton.addEventListener('click', arrowClickNextHandler);
+        reviewsSlider.on('select', arrowClickDisabledHandler);
+        reviewsSlider.on('select', getCurrentReview);
+    }
+
     tabMembership();
     getTeamSlider();
+    getReviewsSlider();
 
 });

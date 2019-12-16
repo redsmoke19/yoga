@@ -6,8 +6,10 @@
   }
   &__item {
     background-color: $white;
+    margin-right: 20px;
     padding: 60px 15px 30px;
     position: relative;
+    width: 100%;
     &::before {
       content: url("../images/general/icon-quote.svg");
       height: 23px;

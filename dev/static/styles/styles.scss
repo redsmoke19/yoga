@@ -99,5 +99,8 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
+.flickity-viewport {
+  transition: height 0.2s;
+}
 //Модули
 @import "modules/modules";
